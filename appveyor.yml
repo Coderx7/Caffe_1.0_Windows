@@ -11,6 +11,13 @@ environment:
 
     - MSVC_VERSION: 14
       WITH_NINJA: 0
+      CMAKE_CONFIG: Debug
+      CMAKE_BUILD_SHARED_LIBS: 0
+      PYTHON_VERSION: 3
+      WITH_CUDA: 0
+
+    - MSVC_VERSION: 14
+      WITH_NINJA: 0
       CMAKE_CONFIG: Release
       CMAKE_BUILD_SHARED_LIBS: 0
       PYTHON_VERSION: 2
@@ -24,33 +31,33 @@ environment:
       WITH_CUDA: 0
 
     - MSVC_VERSION: 14
-      WITH_NINJA: 1
+      WITH_NINJA: 0
       CMAKE_CONFIG: Release
       CMAKE_BUILD_SHARED_LIBS: 0
-      PYTHON_VERSION: 2
-      WITH_CUDA: 0
-
-    - MSVC_VERSION: 14
-      WITH_NINJA: 1
-      CMAKE_CONFIG: Debug
-      CMAKE_BUILD_SHARED_LIBS: 0
-      PYTHON_VERSION: 2
-      WITH_CUDA: 0
+      PYTHON_VERSION: 3
+      WITH_CUDA: 1
       
     - MSVC_VERSION: 14
-      WITH_NINJA: 1
+      WITH_NINJA: 0
       CMAKE_CONFIG: Release
       CMAKE_BUILD_SHARED_LIBS: 0
       PYTHON_VERSION: 2
       WITH_CUDA: 1
       
     - MSVC_VERSION: 14
-      WITH_NINJA: 1
-      CMAKE_CONFIG: Release
+      WITH_NINJA: 0
+      CMAKE_CONFIG: Debug
       CMAKE_BUILD_SHARED_LIBS: 0
       PYTHON_VERSION: 3
       WITH_CUDA: 1        
 
+    - MSVC_VERSION: 14
+      WITH_NINJA: 0
+      CMAKE_CONFIG: Debug
+      CMAKE_BUILD_SHARED_LIBS: 0
+      PYTHON_VERSION: 2
+      WITH_CUDA: 1   
+
     - MSVC_VERSION: 12
       WITH_NINJA: 0
       CMAKE_CONFIG: Release
@@ -66,18 +73,18 @@ environment:
       WITH_CUDA: 0
 
     - MSVC_VERSION: 12
-      WITH_NINJA: 1
+      WITH_NINJA: 0
       CMAKE_CONFIG: Release
       CMAKE_BUILD_SHARED_LIBS: 0
       PYTHON_VERSION: 2
-      WITH_CUDA: 0
+      WITH_CUDA: 1
 
     - MSVC_VERSION: 12
-      WITH_NINJA: 1
+      WITH_NINJA: 0
       CMAKE_CONFIG: Debug
       CMAKE_BUILD_SHARED_LIBS: 0
       PYTHON_VERSION: 2
-      WITH_CUDA: 0
+      WITH_CUDA: 1
 
 build_script:
 - cmd: >-
