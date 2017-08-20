@@ -1,6 +1,6 @@
 # Windows Caffe
 
-**This is an experimental, communtity based branch led by Guillaume Dumont (@willyd). It is a work-in-progress.**
+**This is the latest version of Caffe for windows which has all the examples made ready for windows users. **
 
 This branch of Caffe ports the framework to Windows.
 
