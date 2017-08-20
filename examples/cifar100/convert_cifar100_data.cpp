@@ -48,12 +48,12 @@ and this pattern repeats until the whole dataset is finished.
 */
 void read_image(std::ifstream* file,
 int* coarse_label, int* fine_label, char* buffer) {
-  char clabel_char,flabel_char;
-  file->read(&clabel_char, 1);  //read the first byte into coarse label
-  file->read(&flabel_char, 1);  //read the second byte into fine label
+  char clabel_char, flabel_char;
+  file->read(&clabel_char, 1);  // read the first byte into coarse label
+  file->read(&flabel_char, 1);  // read the second byte into fine label
   *coarse_label = clabel_char;
   *fine_label = flabel_char;
-  file->read(buffer, kCIFARImageNBytes);  //read the next 3072 bytes into the buffer
+  file->read(buffer, kCIFARImageNBytes);  // read the next 3072 bytes
   return;
 }
 
@@ -63,7 +63,7 @@ void convert_dataset(const string& input_folder,
   train_db->Open(output_folder + "/cifar100_train_" + db_type, db::NEW);
   scoped_ptr<db::Transaction> txn(train_db->NewTransaction());
   // Data buffer
-  int coarse_label,fine_label;
+  int coarse_label, fine_label;
   char str_buffer[kCIFARImageNBytes];
   Datum datum;
   datum.set_channels(3);
@@ -115,8 +115,8 @@ void convert_dataset(const string& input_folder,
 
 int main(int argc, char** argv) {
   if (argc != 4) {
-    printf("This script converts the CIFAR100 dataset to the lmdb/leveldb format used\n"
-           "by caffe to perform classification.\n"
+    printf("This script converts the CIFAR100 dataset to the lmdb/leveldb\n"
+           " format used by caffe to perform classification.\n"
            "Usage:\n"
            "    convert_cifar_data input_folder output_folder db_type\n"
            "Where the input folder should contain the binary batch files.\n"
