@@ -1,4 +1,4 @@
-# Windows Caffe
+# Windows Caffe 1.0
 
 **This is the latest version of Caffe for windows which has all the examples made ready for windows users.**
 
