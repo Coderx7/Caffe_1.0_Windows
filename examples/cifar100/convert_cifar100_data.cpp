@@ -1,10 +1,11 @@
 //
-// This script converts the CIFAR dataset to the leveldb format used
+// This script converts the CIFAR100 dataset to the lmdb/leveldb format used
 // by caffe to perform classification.
 // Usage:
 //    convert_cifar_data input_folder output_db_file
 // The CIFAR dataset could be downloaded at
 //    http://www.cs.toronto.edu/~kriz/cifar.html
+// Seek more information : Coderx7@Gmail.com
 
 #include <fstream>  // NOLINT(readability/streams)
 #include <string>
@@ -23,12 +24,12 @@ using boost::scoped_ptr;
 using std::string;
 namespace db = caffe::db;
 
-//the spatial size e.i height and width of images in cifar10/100 dataset
-const int kCIFARSize = 32;  
-//the size of an image in cifar10/100 dataset (32*32*3=3072)
-const int kCIFARImageNBytes = 3072;  
-//the number of images in a batch file 
-const int kCIFARBatchSize = 10000;  
+// the spatial size e.i height and width of images in cifar10/100 dataset
+const int kCIFARSize = 32;
+// the size of an image in cifar10/100 dataset (32*32*3=3072)
+const int kCIFARImageNBytes = 3072;
+// the number of images in a batch file
+const int kCIFARBatchSize = 10000;
 // in cifar100, there is only one batch of 50K training images
 const int kCIFARTrainBatches = 1;
 
@@ -46,18 +47,18 @@ one is a fine label and the next 3072 bytes are the actual image
 and this pattern repeats until the whole dataset is finished.
 */
 void read_image(std::ifstream* file,
- int* coarse_label, int* fine_label, char* buffer) {
-    char clabel_char,flabel_char;
-    file->read(&clabel_char, 1);//read the first byte into coarse label
-    file->read(&flabel_char, 1);//read the second byte into fine label
-    *coarse_label = clabel_char;
-    *fine_label = flabel_char;
-    file->read(buffer, kCIFARImageNBytes);//read the next 3072 bytes into the buffer
-    return;
+int* coarse_label, int* fine_label, char* buffer) {
+  char clabel_char,flabel_char;
+  file->read(&clabel_char, 1);  //read the first byte into coarse label
+  file->read(&flabel_char, 1);  //read the second byte into fine label
+  *coarse_label = clabel_char;
+  *fine_label = flabel_char;
+  file->read(buffer, kCIFARImageNBytes);  //read the next 3072 bytes into the buffer
+  return;
 }
 
 void convert_dataset(const string& input_folder,
- const string& output_folder,  const string& db_type) {
+  const string& output_folder,  const string& db_type) {
   scoped_ptr<db::DB> train_db(db::GetDB(db_type));
   train_db->Open(output_folder + "/cifar100_train_" + db_type, db::NEW);
   scoped_ptr<db::Transaction> txn(train_db->NewTransaction());
@@ -76,13 +77,13 @@ void convert_dataset(const string& input_folder,
   std::ifstream train_data_file(batchFileName.c_str(),
   std::ios::in | std::ios::binary);
   CHECK(train_data_file) << "Unable to open train file ";
-  //we have 50,000 images for training
+  // we have 50,000 images for training
   int training_batch_size = kCIFARBatchSize * 5;
   for (int itemid = 0; itemid < training_batch_size; ++itemid) {
     read_image(&train_data_file, &coarse_label,
-	&fine_label, str_buffer);
+    &fine_label, str_buffer);
     datum.set_label(coarse_label);
-	datum.set_label(fine_label);
+    datum.set_label(fine_label);
     datum.set_data(str_buffer, kCIFARImageNBytes);
     string out;
     CHECK(datum.SerializeToString(&out));
@@ -97,16 +98,16 @@ void convert_dataset(const string& input_folder,
   txn.reset(test_db->NewTransaction());
   // Open files
   std::ifstream test_data_file((input_folder + "/test.bin").c_str(),
-  std::ios::in | std::ios::binary);
+      std::ios::in | std::ios::binary);
   CHECK(test_data_file) << "Unable to open test file.";
   for (int itemid = 0; itemid < kCIFARBatchSize; ++itemid)  {
-	  read_image(&test_data_file, &coarse_label, &fine_label, str_buffer);
-	  datum.set_label(coarse_label);
-	  datum.set_label(fine_label);
-	  datum.set_data(str_buffer, kCIFARImageNBytes);
-	  string out;
-	  CHECK(datum.SerializeToString(&out));
-	  txn->Put(caffe::format_int(itemid, 5), out);
+    read_image(&test_data_file, &coarse_label, &fine_label, str_buffer);
+    datum.set_label(coarse_label);
+    datum.set_label(fine_label);
+    datum.set_data(str_buffer, kCIFARImageNBytes);
+    string out;
+    CHECK(datum.SerializeToString(&out));
+    txn->Put(caffe::format_int(itemid, 5), out);
   }
   txn->Commit();
   test_db->Close();
@@ -114,12 +115,12 @@ void convert_dataset(const string& input_folder,
 
 int main(int argc, char** argv) {
   if (argc != 4) {
-    printf("This script converts the CIFAR dataset to the leveldb format used\n"
+    printf("This script converts the CIFAR100 dataset to the lmdb/leveldb format used\n"
            "by caffe to perform classification.\n"
            "Usage:\n"
            "    convert_cifar_data input_folder output_folder db_type\n"
            "Where the input folder should contain the binary batch files.\n"
-           "The CIFAR dataset could be downloaded at\n"
+           "The CIFAR100 dataset could be downloaded at\n"
            "    http://www.cs.toronto.edu/~kriz/cifar.html\n"
            "You should gunzip them after downloading.\n");
   } else {
