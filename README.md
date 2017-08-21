@@ -1,9 +1,10 @@
 # Windows Caffe 1.0
 
-**This is the latest version of Caffe for windows which has all the examples made ready for windows users.**
-این آخرین نسخه ویندوز کفی هست که تمامی مثالهادر اون براحتی قابل اجرا در ویندوز هستند. برای اطلاعات بیشتر
-میتونید به لینک زیر مراجعه کنید 
-[نصب و پیکربندی کفی در ویندوز](http://deeplearning.ir/آموزش-نصب-و-پیکربندی-caffe-در-ویندوز/)
+**This is the latest version of Caffe for windows which has all the examples made ready for windows users.**  
+
+این آخرین نسخه کفی مبتنی بر ویندوز هست که تمامی مثالهادر اون براحتی قابل اجرا در ویندوز هستند. برای اطلاعات بیشتر
+میتونید به [نصب و پیکربندی کفی در ویندوز](http://deeplearning.ir/آموزش-نصب-و-پیکربندی-caffe-در-ویندوز/) مراجعه کنید 
+
 
 نسخه های از پیش کامپایل شده رو هم میتونید از زیر دانلود کنید . 
 اونهایی که فقط سی پی یو اونلی نوشته شدن  روی هر سیستمی کار میکنند (64 بیتی البته) و نیازی به وجود کارت گرافیک نیست
@@ -16,7 +17,7 @@ This branch of Caffe ports the framework to Windows.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ew7cl2k1qfsnyql4/branch/windows?svg=true)](https://ci.appveyor.com/project/Coderx7/caffe-1-0-windows) AppVeyor (Windows build)
 
-## Prebuilt binaries
+## Prebuilt binaries | نسخه های از پیش کامپایل شده
 
 Prebuilt binaries can be downloaded from the latest CI build on appveyor for the following configurations:
 
