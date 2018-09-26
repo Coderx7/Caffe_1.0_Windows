@@ -21,7 +21,7 @@ if DEFINED APPVEYOR (
     if NOT DEFINED RUN_INSTALL set RUN_INSTALL=1
 
     :: Set python 2.7 with conda as the default python
-    if !PYTHON_VERSION! EQU 2 (
+    if !PYTHON_VERSION! EQU 2.7 (
         set CONDA_ROOT=C:\Miniconda-x64
     )
     :: Set python 3.6 with conda as the default python
@@ -67,7 +67,7 @@ if DEFINED APPVEYOR (
     )
 
     :: Disable linting with python 3 until we find why the script fails
-    if !PYTHON_VERSION! EQU 3 (
+    if !PYTHON_VERSION! GTR 3 (
         set RUN_LINT=0
     )
 
