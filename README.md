@@ -1,8 +1,8 @@
-# Windows Caffe 1.0 
+# Windows Caffe 1.0 With Python3.6 Support
 
-**This is the latest version of Caffe for windows which has all the examples made ready for windows users.**  
+**This is the latest version of Caffe for windows which has all the examples made ready for windows users. This branch also supports Python3.6 which was not supported in the official branch until now!**  
 
-این آخرین نسخه کفی مبتنی بر ویندوز هست که تمامی مثالهادر اون براحتی قابل اجرا در ویندوز هستند. برای اطلاعات بیشتر
+این آخرین نسخه کفی مبتنی بر ویندوز هست که تمامی مثالهادر اون براحتی قابل اجرا در ویندوز هستند.  این نسخه برخلاف نسخه رسمی کفی در  ویندوز از پایتون 3.6 هم پشتیبانی میکنه برای اطلاعات بیشتر
 میتونید به [نصب و پیکربندی کفی در ویندوز](http://deeplearning.ir/آموزش-نصب-و-پیکربندی-caffe-در-ویندوز/) مراجعه کنید 
 
 
@@ -43,10 +43,10 @@ Prebuilt binaries can be downloaded from the latest CI build on appveyor for the
 
 ### Optional Dependencies
 
- - Python for the pycaffe interface. Anaconda Python 2.7 or 3.5 x64 (or Miniconda)
+ - Python for the pycaffe interface. Anaconda Python 2.7, 3.5 and 3.6 x64 (or Miniconda)
  - Matlab for the matcaffe interface.
  - CUDA 7.5 or 8.0 (use CUDA 8 if using Visual Studio 2015)
- - cuDNN v5
+ - cuDNN v5.1 or v6.0
 
  We assume that `cmake.exe` and `python.exe` are on your `PATH`.
 
