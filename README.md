@@ -15,21 +15,22 @@ This branch of Caffe ports the framework to Windows.
 
 [![Travis Build Status](https://api.travis-ci.org/BVLC/caffe.svg?branch=windows)](https://travis-ci.org/BVLC/caffe) Travis (Linux build)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ew7cl2k1qfsnyql4/branch/windows?svg=true)](https://ci.appveyor.com/project/Coderx7/caffe-1-0-windows) AppVeyor (Windows build)
+[![Build status](https://ci.appveyor.com/api/projects/status/xjj2bhtatgheqe69?svg=true)](https://ci.appveyor.com/project/Coderx7/caffe-1-0-windows)
+AppVeyor (Windows build)
  
 ## Prebuilt binaries | نسخه های از پیش کامپایل شده
 
 Prebuilt binaries can be downloaded from the latest CI build on appveyor for the following configurations:
 
-- Visual Studio 2015, CPU only, Python 3.5: [Caffe Release](https://ci.appveyor.com/api/buildjobs/ex56gceamrvl1gtw/artifacts/build%2Fcaffe.zip), [Caffe Debug](https://ci.appveyor.com/api/buildjobs/4u73xxyegtctcum0/artifacts/build%2Fcaffe.zip)
+- Visual Studio 2015, CPU only, Python 3.5: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py35_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py35_debug.zip.zip)
 
-- Visual Studio 2015, CUDA 8.0(GPU), Python 3.5: [Caffe Release](https://ci.appveyor.com/api/buildjobs/uf8yejb6dvguoh4s/artifacts/build%2Fcaffe.zip), [Caffe Debug](https://ci.appveyor.com/api/buildjobs/uygm3tvcr40d11h0/artifacts/build%2Fcaffe.zip)
+- Visual Studio 2015, CUDA 8.0(GPU), Python 3.5: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cuda_x64_MSVC14_Py35_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cuda_x64_MSVC14_Py35_debug.zip)
 
-- Visual Studio 2015, CPU only, Python 2.7: [Caffe Release](https://ci.appveyor.com/api/buildjobs/h1h509b304l2uak4/artifacts/build%2Fcaffe.zip), [Caffe Debug](https://ci.appveyor.com/api/buildjobs/uix9n5v3fx4n852f/artifacts/build%2Fcaffe.zip)
+- Visual Studio 2015, CPU only, Python 2.7: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py27_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py27_debug.zip)
 
-- Visual Studio 2015, CUDA 8.0(GPU), Python 2.7: [Caffe Release](https://ci.appveyor.com/api/buildjobs/e27u5mbpnrk77i4m/artifacts/build%2Fcaffe.zip), [Caffe Debug](https://ci.appveyor.com/api/buildjobs/e50j4ieth7dugd6l/artifacts/build%2Fcaffe.zip)
+- Visual Studio 2015, CUDA 8.0(GPU), Python 2.7: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cuda_x64_MSVC14_Py27_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cuda_x64_MSVC14_Py27_debug.zip)
 
-- Visual Studio 2013, CPU only, Python 2.7: [Caffe Release](https://ci.appveyor.com/api/buildjobs/89n2guf7d5oak6r3/artifacts/build%2Fcaffe.zip), [Caffe Debug](https://ci.appveyor.com/api/buildjobs/docdoa7s56xp3ruf/artifacts/build%2Fcaffe.zip)
+- Visual Studio 2013, CPU only, Python 2.7: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC12_Py27_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC12_Py27_debug.zip)
 
 
 
