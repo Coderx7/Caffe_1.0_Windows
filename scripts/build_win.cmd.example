@@ -24,10 +24,14 @@ if DEFINED APPVEYOR (
     if !PYTHON_VERSION! EQU 2 (
         set CONDA_ROOT=C:\Users\Hossein\Anaconda2
     )
-    :: Set python 3.6(or 3.5) with conda as the default python
-    if !PYTHON_VERSION! EQU 3 (
-        set CONDA_ROOT=C:\Users\Hossein\Anaconda3
+    :: Set python 3.6 with conda as the default python
+    if !PYTHON_VERSION! EQU 3.6 (
+        set CONDA_ROOT=C:\Users\Hossein\Anaconda36
     )
+    :: Set python 3.5 with conda as the default python
+    if !PYTHON_VERSION! EQU 3.5 (
+        set CONDA_ROOT=C:\Users\Hossein\Anaconda35
+    )    
     set PATH=!CONDA_ROOT!;!CONDA_ROOT!\Scripts;!CONDA_ROOT!\Library\bin;!PATH!
 
     :: Check that we have the right python version
