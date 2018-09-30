@@ -17,7 +17,7 @@ This branch of Caffe ports the framework to Windows.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/xjj2bhtatgheqe69?svg=true)](https://ci.appveyor.com/project/Coderx7/caffe-1-0-windows)
 AppVeyor (Windows build)
- 
+
 ## Prebuilt binaries | نسخه های از پیش کامپایل شده
 
 Prebuilt binaries can be downloaded from the [release section](https://github.com/Coderx7/Caffe_1.0_Windows/releases) for the following configurations:
