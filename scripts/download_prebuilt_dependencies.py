@@ -19,7 +19,7 @@ WIN_DEPENDENCIES_URLS = {
     ('v140', '3.5'):("https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/libraries_v140_x64_py35_1.1.0.tar.bz2",
                   "f060403fd1a7448d866d27c0e5b7dced39c0a607"),
 	('v140', '3.6'):("https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/libraries_v140_x64_py36_1.1.0.tar.bz2",
-                  "ebeaed878c43e7b2b1c2b850dcf40c174216514a"),
+                  "2676374a5179a8101ba5f1c5da63bba31df109a8"),
 }
 
 # function for checking SHA1.
