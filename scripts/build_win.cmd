@@ -43,7 +43,7 @@ if DEFINED APPVEYOR (
     :: Update conda
     conda update conda -y
     :: Download other required packages
-    conda install --yes cmake ninja numpy scipy protobuf==3.1.0 six scikit-image pyyaml pydotplus graphviz
+    conda install --yes cmake ninja numpy scipy protobuf six scikit-image pyyaml pydotplus graphviz
 
     if ERRORLEVEL 1  (
       echo ERROR: Conda update or install failed
