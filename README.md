@@ -22,9 +22,9 @@ AppVeyor (Windows build)
 
 Prebuilt binaries can be downloaded from the [release section](https://github.com/Coderx7/Caffe_1.0_Windows/releases) for the following configurations:
 
-- Visual Studio 2015, CPU only, Python 3.6: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cpu_x64_MSVC14_Py36_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cpu_x64_MSVC14_Py36_debug.zip)
+- Visual Studio 2015, CPU only, Python 3.6: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_build_all_archs_py36/caffe_MSVC14_Release_CPU_Py3.6.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cpu_x64_MSVC14_Py36_debug.zip)
 
-- Visual Studio 2015, CUDA 8.0(GPU), Python 3.6: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cuda_x64_MSVC14_Py36_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cuda_x64_MSVC14_Py36_debug.zip)
+- Visual Studio 2015, CUDA 8.0(GPU), Python 3.6: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_build_all_archs_py36/caffe_MSVC14_Release_GPU_Py3.6.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows_py36/caffe_cuda_x64_MSVC14_Py36_debug.zip)
 
 - Visual Studio 2015, CPU only, Python 3.5: [Caffe Release](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py35_release.zip), [Caffe Debug](https://github.com/Coderx7/Caffe_1.0_Windows/releases/download/caffe_1.0_windows/caffe_cpu_x64_MSVC14_Py35_debug.zip.zip)
 
